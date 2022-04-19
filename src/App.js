@@ -22,7 +22,7 @@ function App() {
             let height = d.offsetHeight;
 
             if (offset >= height) {
-                setMax(prev => prev + 1);
+                setMax(prev => prev + 8);
             }
         }
 
@@ -44,7 +44,7 @@ function App() {
 }
 
 function Item() {
-    return <div style={{ height: `${itemH}px` }} />;
+    return <div style={{ height: `${itemH}px`, outline: '1px solid red' }} />;
 }
 
 export default App;
