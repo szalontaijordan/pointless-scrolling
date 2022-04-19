@@ -1,11 +1,12 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
 import './App.css';
 
-const ten = 1000;
+const start = 20;
+const ten = 100*start;
 const itemH = 200;
 
 function App() {
-    const [max, setMax] = useState(10);
+    const [max, setMax] = useState(start);
     const ref = useRef(null);
     const items = useMemo(() => [...Array(max).keys()], [max]);
     const percentage = useMemo(() => ((ten - (ten - max)) / ten), [max]);
